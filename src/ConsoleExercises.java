@@ -1,62 +1,44 @@
 import java.util.Scanner;
 
 public class ConsoleExercises {
-
     public static void main(String[] args) {
-        // Exercise 1: Output the value of pi with two decimal places
-        double pi = 3.14159;
-        System.out.format("The value of pi is approximately %.2f.%n", pi);
+//
+//        double pi = 3.14159;
+//        System.out.printf("The value of pi is approximately %.2f%n", pi);
+//
+//        Scanner scanner = new Scanner(System.in);
+//        System.out.println("Enter an Integer: ");
+//        int userInput = scanner.nextInt();
+//        System.out.printf("Your new integer is: %d%n", userInput);
 
-        // Exercise 2: Prompt user to enter an integer and display it
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("Enter an integer: ");
-        int userInteger = scanner.nextInt();
-        System.out.println("You entered: " + userInteger);
+//        Scanner scanner2 =new Scanner(System.in);
+//        System.out.println("Enter 3 words separated by a space: ");
+//
+//        String input1 = scanner2.next();
+//        String input2 = scanner2.next();
+//        String input3 = scanner2.next();
+//
+//        System.out.printf("The words you entered are: %n %s%n %s%n %s%n", input1, input2, input3);
 
-        // Exercise 3: Prompt user to enter three words and display them on separate lines
-        scanner.nextLine(); // Consume the newline character left by nextInt
-        System.out.print("Enter three words: ");
-        String word1 = scanner.next();
-        String word2 = scanner.next();
-        String word3 = scanner.next();
-        System.out.println("Words entered:\n" + word1 + "\n" + word2 + "\n" + word3);
+//        Scanner scanner3 = new Scanner(System.in);
+//        System.out.println("Enter a sentence: ");
+//
+//        String sentence = scanner3.nextLine();
+//
+//        System.out.printf("Here is your sentence: %n %s%n", sentence);
 
-        // Exercise 4: Prompt user to enter a sentence and display it
-        scanner.nextLine(); // Consume the newline character left by next()
-        System.out.print("Enter a sentence: ");
-        String sentence = scanner.nextLine();
-        System.out.println("You entered: " + sentence);
+        Scanner scanner4 = new Scanner(System.in);
+        System.out.println("length: ");
+        double length = scanner4.nextInt();
 
-        // Exercise 5: Prompt user for length and width of a classroom, calculate area and perimeter
-        System.out.print("Enter the length of the classroom: ");
-        String lengthInput = scanner.nextLine();
-        System.out.print("Enter the width of the classroom: ");
-        String widthInput = scanner.nextLine();
-
-        double length = Double.parseDouble(lengthInput);
-        double width = Double.parseDouble(widthInput);
-
+        System.out.println("width: ");
+        double width = scanner4.nextInt();
         double area = length * width;
-        double perimeter = 2 * (length + width);
+        double perimeter = (length * 2) + (width * 2);
 
-        System.out.println("Area of the classroom: " + area);
-        System.out.println("Perimeter of the classroom: " + perimeter);
+        System.out.printf("the area is : %n %s%n", area);
+        System.out.printf("the perimeter is: %n %s%n", perimeter);
 
-        // Bonus: Accept decimal entries for length and width
-        scanner.useDelimiter("\n");
-        System.out.print("Enter the length of the classroom (decimal): ");
-        length = scanner.nextDouble();
-        System.out.print("Enter the width of the classroom (decimal): ");
-        width = scanner.nextDouble();
-
-        area = length * width;
-        perimeter = 2 * (length + width);
-        double volume = length * width * 10; // Assuming a height of 10 for volume
-
-        System.out.println("Area of the classroom: " + area);
-        System.out.println("Perimeter of the classroom: " + perimeter);
-        System.out.println("Volume of the classroom: " + volume);
-
-        scanner.close();
     }
+
 }
